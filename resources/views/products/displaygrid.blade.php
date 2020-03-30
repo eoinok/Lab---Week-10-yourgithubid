@@ -7,7 +7,7 @@
             <li><button id="checkOut" onclick="window.location.href=''" type="button" class="btn btn-primary navbar-btn center-block">Check Out</button></a></li> 
             <li><button id="emptycart" type="button" class="btn btn-primary navbar-btn center-block">Empty Cart</button></li> 
             <li><span style="font-size:40px;margin-right:0px;" class="glyphicon glyphicon-shopping-cart navbar-btn"></span></li> 
-            <li><div class="navbar-text" id="shoppingcart" style="font-size:12pt;margin-left:0px;margin-right:0px;"></div></li> 
+            <li><div class="navbar-text" id="shoppingcart" style="font-size:12pt;margin-left:0px;margin-right:0px;">{{$totalItems}}</div></li> 
             <li><div class="navbar-text" style="font-size:14pt;margin-left:0px;">Item(s)</div></li> 
         <ul> 
     </nav> 
