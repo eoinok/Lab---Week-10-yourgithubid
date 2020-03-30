@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('products/displaygrid', 'productController@displaygrid')->name('products.displaygrid');
+
+//Route::resource('scorders', 'scorderController');
+
+//Route::resource('products', 'productController');
+
+//Route::resource('orderdetails', 'orderdetailController');
