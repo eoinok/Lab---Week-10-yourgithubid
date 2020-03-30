@@ -9,6 +9,7 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use Session;
 
 class productController extends AppBaseController
 {
@@ -24,6 +25,24 @@ class productController extends AppBaseController
 	{
 		$products=\App\Models\Product::all();
 		return view('products.displaygrid')->with('products',$products);    
+	}
+	
+	public function additem($productid)
+	{
+		if (Session::has('cart')) {
+			$cart = Session::get('cart');
+			if (isset($cart[$productid])) {
+				$cart[$productid]=$cart[$productid]+1; //add one to product in cart
+			}
+			else {
+				$cart[$productid]=1; //new product in cart
+			}
+		}
+		else {
+			$cart[$productid]=1; //new cart
+		}
+		Session::put('cart', $cart);
+		return Response::json(['success'=>true,'total'=>$cart[$productid]],200);
 	}
 
     /**
