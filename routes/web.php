@@ -19,6 +19,8 @@ Route::get('products/displaygrid', 'productController@displaygrid')->name('produ
 
 Route::get('products/additem/{id}', 'productController@additem')->name('products.additem');
 
+Route::get('products/emptycart', 'productController@emptycart')->name('products.emptycart');
+
 //Route::resource('scorders', 'scorderController');
 
 //Route::resource('products', 'productController');

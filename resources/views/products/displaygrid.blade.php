@@ -27,6 +27,19 @@
     @if ($j==3) @php $j=0 @endphp </div> @endif 
 @endforeach
 <script>
+$("#emptycart").click(function() { 
+   console.log("empty cart");
+   $.ajax({ 
+	type: "get", url: "{{ url('products/emptycart')   }}",
+    success: function() { 
+        $('#shoppingcart').text(0);
+		console.log("success");
+    }, 
+    error: function() { 
+        alert("problem communicating with the server");
+    } 
+  }); 
+}); 
 $(".bth,.addItem").click(function() {
     var total = parseInt($('#shoppingcart').text());
     var i=$(this).val();

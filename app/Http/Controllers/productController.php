@@ -39,6 +39,14 @@ class productController extends AppBaseController
 		return view('products.displaygrid')->with('products',$products)->with('totalItems',$totalItems);
 	}
 	
+	public function emptycart()
+    {
+         if (Session::has('cart')) {
+             Session::forget('cart');
+         }
+         return Response::json(['success'=>true],200);
+    }
+	
 	public function additem($productid)
 	{
 		if (Session::has('cart')) {
