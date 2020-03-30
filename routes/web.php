@@ -14,7 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::post('scorders/placeorder', 'scorderController@placeorder')->name('scorders.placeorder');
+Route::get('scorders/checkout', 'scorderController@checkout')->name('scorders.checkout');
 Route::get('products/displaygrid', 'productController@displaygrid')->name('products.displaygrid');
 
 Route::get('products/additem/{id}', 'productController@additem')->name('products.additem');

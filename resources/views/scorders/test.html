@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+    <head> 
+        <meta charset="UTF-8"> 
+        <title>Shopping Cart</title> 
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'> 
+        <!-- Bootstrap 3.3.7 --> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css"> 
+    </head> 
+    <body >  
+        <div id="page-content-wrapper"> 
+            <div class="container-fluid"> 
+                <div class="row"> 
+                    <div class="col-lg-2"></div> 
+                    <div class="col-lg-8">  
+<H2>Place Order</h2> 
+<form method="POST" action="http://localhost:8000/scorders/placeorder" accept-charset="UTF-8"><input name="_token" type="hidden" value="1urdPcQja5UJfCnhs2rbaDqoKBpAZUu6HFRYDPKH"> 
+<input type="hidden" name="_token" value="1urdPcQja5UJfCnhs2rbaDqoKBpAZUu6HFRYDPKH"> 
+<table class="table table-condensed table-bordered"> 
+    <thead> 
+        <tr><th>Id</th><th>Name</th><th>Description</th><th>Colour</th><th>Price</th><th>Quantity</th>
+        </tr>
+    </thead> 
+    <tbody> 
+     
+     
+         
+        <tr> 
+            <td><input size="3" style="border:none" type="text" name="productid[]" readonly value="2"></td> 
+              <td>Sweatshirt</td> 
+              <td>V Neck</td> 
+              <td>Blue</td> 
+              <td><div class="price">20</div></td> 
+              <td> <input size="3" style="border:none" class="qty" type="text" name="quantity[]" readonly value="3"> </td> 
+              <td> 
+                  <button type="button" class="btn btn-default add"><span class="glyphicon glyphicon-plus"/></button> 
+                  <button type="button" class="btn btn-default subtract"><span class="glyphicon glyphicon-minus"/></button> 
+                  <button type="button" class="btn btn-default value="remove" onClick="$(this).closest('tr').remove();"><span class="glyphicon glyphicon-remove"/></button> 
+              </td>
+               
+        </tr> 
+     
+         
+        <tr> 
+            <td><input size="3" style="border:none" type="text" name="productid[]" readonly value="3"></td> 
+              <td>Hoodie</td> 
+              <td>Comfort Fit</td> 
+              <td>Red</td> 
+              <td><div class="price">25</div></td> 
+              <td> <input size="3" style="border:none" class="qty" type="text" name="quantity[]" readonly value="1"> </td> 
+              <td> 
+                  <button type="button" class="btn btn-default add"><span class="glyphicon glyphicon-plus"/></button> 
+                  <button type="button" class="btn btn-default subtract"><span class="glyphicon glyphicon-minus"/></button> 
+                  <button type="button" class="btn btn-default value="remove" onClick="$(this).closest('tr').remove();"><span class="glyphicon glyphicon-remove"/></button> 
+              </td>
+               
+        </tr> 
+        </tbody> 
+</table> 
+<button type="submit" class="btn btn-primary">Submit</button>
+</form> 
+
+ </div> 
+                    <div class="col-lg-2"></div> 
+                </div> 
+            </div> 
+         </div> 
+    </body> 
+</html>
